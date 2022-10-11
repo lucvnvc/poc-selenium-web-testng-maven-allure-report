@@ -1,7 +1,7 @@
 Tech stack:
 - Java
 - Cucumber
-- JUnit
+- TestNG
 - Selenium
 - Maven
 - Allure report
