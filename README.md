@@ -1,9 +1,11 @@
 Tech stack:
+- Java
+- Cucumber
+- JUnit
 - Selenium
-- TestNG
 - Maven
 - Allure report
 
 Run
-- with chrome: mvn clean verify
-- with firefox: mvn clean verify -Dproperties="firefox.properties"
+- with chrome: mvn clean test
+- with firefox: mvn clean test -Dproperties="firefox.properties"
