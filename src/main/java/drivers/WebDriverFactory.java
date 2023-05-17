@@ -1,20 +1,30 @@
 package drivers;
 
-import constant.EWebDriverType;
+import browsers.Chrome;
+import browsers.Firefox;
+import browsers.IWebDriver;
+import browsers.Safari;
+import constant.EBrowserType;
 
 public class WebDriverFactory {
-    public WebDriverFactory() {
 
-    }
+  private WebDriverFactory() {
 
-    public static final IWebDriver getDriverName(String webDriver) {
-        switch (webDriver) {
-            case "chrome":
-                return new Chrome();
-            case "fire_fox":
-                return new Firefox();
-            default:
-                throw new IllegalArgumentException("The webDriverType " + webDriver + " is not supported!");
-        }
+  }
+
+  public static IWebDriver getWebDriver(EBrowserType browserType) {
+    switch (browserType) {
+      case CHROME:
+        return new Chrome();
+      case FIREFOX:
+        return new Firefox();
+      case SAFARI:
+        return new Safari();
+      default:
+        throw new IllegalArgumentException(
+            "The webDriverType " + browserType + " is not supported!");
     }
+  }
+
+
 }

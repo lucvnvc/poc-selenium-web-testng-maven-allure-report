@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite of suite">
+    <listeners>
+        <listener class-name="learning.MySuiteListeners" />
+    </listeners>
+    <suite-files>
+        <suite-file path="TestNG-listeners.xml" />
+        <suite-file path="TestNG-parameters.xml" />
+    </suite-files>
+</suite> <!-- Suite -->
