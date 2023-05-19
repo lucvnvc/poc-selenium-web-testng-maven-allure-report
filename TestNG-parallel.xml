@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite of Parallel" parallel="tests" thread-count="2">
-    <test name="parallel1">
+<suite name="Suite of Parallel">
+    <listeners>
+        <listener class-name="learning.MyListeners" />
+    </listeners>
+    <test name="parallel1" parallel="methods" thread-count="2">
         <classes>
             <class name="learning.ParallelTest"/>
         </classes>
     </test> <!-- Test -->
 
-    <test name="parallel2">
-        <classes>
-            <class name="learning.ParallelTest"/>
-        </classes>
-    </test> <!-- Test -->
-
-    <test name="parallel3">
-        <classes>
-            <class name="learning.ParallelTest"/>
-        </classes>
-    </test> <!-- Test -->
+<!--    <test name="parallel2" parallel="classes" thread-count="3">-->
+<!--        <classes>-->
+<!--            <class name="learning.ParallelTest"/>-->
+<!--            <class name="learning.ParallelTest"/>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
 </suite> <!-- Suite -->

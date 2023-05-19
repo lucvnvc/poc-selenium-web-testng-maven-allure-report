@@ -6,10 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage {
 
-//  public LoginPage(WebDriver driver) {
-//    super(driver);
-//  }
-
   // define locator
   @FindBy(id = "user-name")
   private WebElement weUser;
@@ -18,10 +14,15 @@ public class LoginPage extends BasePage {
   @FindBy(name = "login-button")
   private WebElement btnLogin;
 
+  public LoginPage() {
+    LOGGER.info("This is Login page");
+  }
+
   // methods
   @Step("the user set an username")
   public LoginPage setUsername(String user) {
     waitVisibilityOf(weUser);
+    weUser.clear();
     weUser.sendKeys(user);
     return this;
   }
@@ -29,6 +30,7 @@ public class LoginPage extends BasePage {
   @Step("the user set a password")
   public LoginPage setPassword(String password) {
     waitVisibilityOf(wePassword);
+    wePassword.clear();
     wePassword.sendKeys(password);
     return this;
   }
