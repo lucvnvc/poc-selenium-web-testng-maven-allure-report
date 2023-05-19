@@ -10,6 +10,7 @@ public class ProductPage extends BasePage {
   private WebElement lbProducts;
 
   public ProductPage() {
+    LOGGER.info("This is Product page");
   }
 
   @Step("this page is Products")

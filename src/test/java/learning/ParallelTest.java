@@ -2,8 +2,9 @@ package learning;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import scenarios.BaseTest;
 
-public class ParallelTest {
+public class ParallelTest extends BaseTest {
   @Test
   public void test01() {
     System.out.println("test 01");

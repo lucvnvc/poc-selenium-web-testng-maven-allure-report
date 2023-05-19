@@ -107,6 +107,8 @@ public class WebTestFactory {
 ### Parallel
 The parallel attribute on the <suite> tag can take one of following values: `methods`, `tests`, `classes`, and `instances`
 
+> Nếu cùng set parallel của maven-surefire-plugin và testNG xml thì khi run ưu tiên config trong testNG file
+
 ### Retry
 > Every time tests fail in a suite, TestNG creates a file called testng-failed.xml in the output directory
 
@@ -117,6 +119,8 @@ Here is how you use a retry analyzer:
 2. Bind this implementation to the @Test annotation for e.g., @Test(retryAnalyzer = LocalRetry.class)
 
 ```
+
+> Maven don't support retry with TestNG
 
 ## TestNG Listeners
 
@@ -150,3 +154,5 @@ There are several interfaces that allow you to modify TestNG's behavior. These i
 ## Logging
 Prior to TestNG version 7.5, TestNG supports logging via a custom logging framework similar to Log4j
 Starting from TestNG version 7.5 TestNG makes use of the logging facade provided by Slf4j.
+
+Using logback-classic to show logs

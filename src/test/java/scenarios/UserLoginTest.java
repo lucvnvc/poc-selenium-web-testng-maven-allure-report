@@ -15,9 +15,7 @@ public class UserLoginTest extends BaseTest {
   public void login_success_with_user_and_pass() {
     productPage = loginPage.setUsername("standard_user").setPassword("secret_sauce")
         .clickOnLoginWithValidUser();
-//    assertThat(productPage.isProductPage(), true);
-//    assertThat("File name should exist", file.exists(), is(equalTo(true)));
-//    assertThatproductPage.isProductPage();
+    Assert.assertTrue(productPage.isProductPage());
   }
 
   @Test
@@ -25,7 +23,7 @@ public class UserLoginTest extends BaseTest {
   public void login_fail_with_user_and_pass() {
     productPage = loginPage.setUsername("standard_user1").setPassword("secret_sauce1")
         .clickOnLoginWithValidUser();
-    Assert.assertTrue(productPage.isProductPage());
+    Assert.assertFalse(productPage.isProductPage());
   }
 
   @Test()
