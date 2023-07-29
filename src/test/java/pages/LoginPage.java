@@ -21,7 +21,7 @@ public class LoginPage extends BasePage {
   // methods
   @Step("the user set an username")
   public LoginPage setUsername(String user) {
-    waitVisibilityOf(weUser);
+    waitForElementVisibilityOf(weUser);
     weUser.clear();
     weUser.sendKeys(user);
     return this;
@@ -29,7 +29,7 @@ public class LoginPage extends BasePage {
 
   @Step("the user set a password")
   public LoginPage setPassword(String password) {
-    waitVisibilityOf(wePassword);
+    waitForElementVisibilityOf(wePassword);
     wePassword.clear();
     wePassword.sendKeys(password);
     return this;
@@ -37,7 +37,7 @@ public class LoginPage extends BasePage {
 
   @Step("the user click on the Login")
   public ProductPage clickOnLoginWithValidUser() {
-    waitToClickAble(btnLogin);
+    waitForElementToClickAble(btnLogin);
     btnLogin.click();
     return new ProductPage();
   }
