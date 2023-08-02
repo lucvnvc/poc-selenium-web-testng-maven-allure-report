@@ -9,3 +9,6 @@ Tech stack:
 Run
 - with chrome: mvn clean test
 - with firefox: mvn clean test -Dproperties="firefox.properties"
+
+### phan nay cua learning_2
+**Hehe**
